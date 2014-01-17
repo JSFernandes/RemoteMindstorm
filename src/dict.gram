@@ -1,0 +1,4 @@
+#JSGF V1.0;
+grammar hello;
+public <greet>= (Good morning | Hello | Hi | Welcome) ( Osama | Paul | Philip | Rita | Will );
+public <sound>= (Play sound);

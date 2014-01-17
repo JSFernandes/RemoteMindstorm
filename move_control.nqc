@@ -1,0 +1,32 @@
+task main()
+{
+  while (true)
+  {
+    if(Message() == 5) {
+      Off(OUT_A + OUT_C);
+    }
+    if(Message() == 1) {
+      OnFwd(OUT_A + OUT_C);
+      Wait(100);
+      Off(OUT_A + OUT_C);
+    }
+    if(Message() == 2) {
+      OnRev(OUT_A + OUT_C);
+      Wait(100);
+      Off(OUT_A + OUT_C);
+    }
+    if(Message() == 3) {
+      OnRev(OUT_A);
+      OnFwd(OUT_C);
+      Wait(100);
+      Off(OUT_A + OUT_C);
+    }
+    if(Message() == 4) {
+      OnRev(OUT_C);
+      OnFwd(OUT_A);
+      Wait(100);
+      Off(OUT_A + OUT_C);
+    }
+    ClearMessage();
+  }
+}
